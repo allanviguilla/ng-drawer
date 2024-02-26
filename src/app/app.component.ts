@@ -9,5 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'ng-drawer';
+  isOpen: boolean = false;
+
+  toggleDrawer(): void {
+    this.isOpen = !this.isOpen;
+  }
 }
