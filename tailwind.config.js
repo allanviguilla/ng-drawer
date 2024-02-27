@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "ccsd-dark-blue": "#052C49",
+        "ccsd-light-blue": "#1771B7",
       },
     },
   },
