@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { DrawerComponent } from './drawer/drawer.component';
@@ -13,4 +13,11 @@ import { DrawerService } from './drawer/services/drawer.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor(private drawerService: DrawerService) {}
+
+  @HostListener('document: click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    this.drawerService.handleDrawerToggle(event);
+  }
+}

@@ -8,6 +8,13 @@ export class DrawerService {
 
   drawerOpenState = new EventEmitter<boolean>();
 
+  handleDrawerToggle(event: MouseEvent): void {
+    const clickedElement = event.target as HTMLElement;
+    if (clickedElement.id === 'toggleDrawer') this.toggleDrawer();
+    if (this.isOpen && clickedElement.id !== 'toggleDrawer')
+      this.toggleDrawer();
+  }
+
   toggleDrawer(): void {
     this.isOpen = !this.isOpen;
     this.drawerOpenState.emit(this.isOpen);
