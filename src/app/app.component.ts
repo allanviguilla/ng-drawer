@@ -9,7 +9,7 @@ import { DrawerService } from './drawer/services/drawer.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DrawerComponent],
+  imports: [RouterOutlet, NavbarComponent, DrawerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
