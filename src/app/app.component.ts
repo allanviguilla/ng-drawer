@@ -18,6 +18,6 @@ export class AppComponent {
 
   @HostListener('document: click', ['$event'])
   onDocumentClick(event: MouseEvent) {
-    this.drawerService.handleDrawerToggle(event);
+    this.drawerService.handleToggleOnContentClick(event);
   }
 }
