@@ -1,12 +1,5 @@
-<div class="drawer-container w-full h-[100vh] overflow-scroll">
-  <app-navbar></app-navbar>
-  <!-- mt-[100px] => margin top 100 pixels which is the height of our navbar -->
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-</div>
 <div
-  class="drawer h-[50vh] w-full bg-blue-500 rounded-tl-lg rounded-tr-lg"
+  class="drawer clickable h-[50vh] w-full bg-blue-500 rounded-tl-lg rounded-tr-lg"
   [class.open]="this.drawerService.isOpen"
 >
   <div class="m-2 p-2 text-white">
